@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scrum.TextSearchController">
+   <top>
+      <AnchorPane maxWidth="1200.0" prefHeight="159.0" prefWidth="1200.0" style="-fx-background-color: #c9a681;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="home" layoutX="509.0" layoutY="37.0" onMouseClicked="#homeClicked" prefHeight="86.0" prefWidth="182.0" text="Library">
+               -fx-cursor: hand;
+               <font>
+                  <Font size="59.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Button fx:id="addBookButton" layoutX="1134.0" layoutY="13.0" mnemonicParsing="false" onAction="#addBookButtonPressed" prefHeight="49.0" prefWidth="52.0" styleClass="add_book_button" stylesheets="@style.css" text="Add Book" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="800.0" maxWidth="1200.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="testLabel" layoutX="3.0" layoutY="71.0" prefHeight="36.0" prefWidth="1193.0">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <GridPane layoutX="3.0" layoutY="55.0" prefHeight="586.0" prefWidth="1200.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="card" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard0Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Label>
+                              <Label fx:id="rating" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Pane fx:id="card1" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard1Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title1" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating1" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks1" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon1" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <Pane fx:id="card2" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard2Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title2" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating2" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks2" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon2" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                     <children>
+                        <Pane fx:id="card3" layoutX="16.0" layoutY="16.0" onMouseClicked="#bookCard3Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title3" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating3" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks3" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon3" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Pane fx:id="card4" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard4Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title4" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating4" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks4" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon4" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Pane fx:id="card5" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard5Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title5" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating5" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks5" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon5" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children></Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Pane fx:id="card6" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard6Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title6" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating6" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks6" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon6" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children></Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Pane fx:id="card7" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard7Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title7" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating7" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks7" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon7" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children></Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Pane fx:id="card8" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard8Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title8" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating8" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks8" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon8" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children></Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <Pane fx:id="card9" layoutX="17.0" layoutY="16.0" onMouseClicked="#bookCard9Pressed" prefHeight="262.0" prefWidth="207.0" style="-fx-border-color: grey; -fx-border-radius: 8;" styleClass="search_card" stylesheets="@style.css">
+                           <children>
+                              <Label fx:id="title9" layoutX="8.0" layoutY="161.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="192.0" styleClass="search_card_title" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rating9" layoutX="132.0" layoutY="218.0" prefHeight="32.0" prefWidth="35.0" styleClass="search_card_rating" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableBooks9" layoutX="51.0" layoutY="220.0" prefHeight="28.0" prefWidth="27.0" styleClass="search_card_available_books">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <FontIcon fx:id="bookIcon9" iconColor="#085318" iconLiteral="fa-book" iconSize="23" layoutX="15.0" layoutY="242.0" />
+                              <FontIcon iconLiteral="fa-star" iconSize="23" layoutX="171.0" layoutY="242.0" />
+                              <FontIcon iconColor="#3a3a3a" iconLiteral="fa-image" iconSize="170" layoutX="12.0" layoutY="146.0" />
+                           </children>
+                        </Pane>
+                     </children></Pane>
+               </children>
+            </GridPane>
+            <Pane layoutX="633.0" layoutY="8.0" prefHeight="55.0" prefWidth="515.0">
+               <children>
+                  <TextField fx:id="titleSearchText" layoutX="14.0" layoutY="10.0" prefHeight="35.0" prefWidth="416.0" promptText="Search by title">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="searchButton" layoutX="450.0" layoutY="12.0" mnemonicParsing="false" onAction="#searchButtonPressed" prefHeight="31.0" prefWidth="65.0" text="Search" />
+               </children>
+            </Pane>
+            <Pane layoutX="36.0" layoutY="-1.0" prefHeight="71.0" prefWidth="515.0">
+               <children>
+                  <TextField fx:id="isbnSearchText" layoutX="7.0" layoutY="18.0" prefHeight="35.0" prefWidth="416.0" promptText="Search by ISBN">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="searchButton1" layoutX="443.0" layoutY="20.0" mnemonicParsing="false" onAction="#isbnButtonPressed" prefHeight="31.0" prefWidth="65.0" text="Search" />
+                  <Label fx:id="isbnErrorLabel" layoutX="133.0" prefHeight="21.0" prefWidth="165.0" text="Please enter a number" textFill="#970000">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

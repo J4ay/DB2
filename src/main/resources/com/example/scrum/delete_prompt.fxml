@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scrum.DeletePromptController">
+   <top>
+      <AnchorPane maxWidth="1200.0" prefHeight="159.0" prefWidth="1200.0" style="-fx-background-color: #c9a681;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="509.0" layoutY="37.0" prefHeight="86.0" prefWidth="182.0" text="Library">
+               <font>
+                  <Font size="59.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="800.0" maxWidth="1200.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="317.0" layoutY="74.0" prefHeight="536.0" prefWidth="567.0">
+               <children>
+                  <Label layoutX="77.0" layoutY="27.0" prefHeight="36.0" prefWidth="383.0" text="Are you sure you want to delete">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bookNameLabel" layoutX="77.0" layoutY="90.0" prefHeight="100.0" prefWidth="413.0" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="211.0" prefHeight="44.0" prefWidth="413.0" text="and all its copies from the library?">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="yesButton" layoutX="331.0" layoutY="341.0" mnemonicParsing="false" onAction="#yesButtonPressed" prefHeight="56.0" prefWidth="124.0" text="Yes, delete the book" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="noButton" layoutX="136.0" layoutY="341.0" mnemonicParsing="false" onAction="#noButtonPressed" prefHeight="56.0" prefWidth="124.0" text="No, keep the book" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
