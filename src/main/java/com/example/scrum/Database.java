@@ -12,7 +12,6 @@ public class Database {
 
     public ArrayList<Book> getBooksByName (String search_title) {           //returns up to 20 results as a String array containing the results matching the search words
         ArrayList<Book> books = new ArrayList<Book>();
-        int i = 0;
         try (Connection connection = DriverManager.getConnection(url)) {
             String query = "SELECT * FROM Imort_Library WHERE title LIKE '%" + search_title + "%';";
             Statement stmt = connection.createStatement();
@@ -79,7 +78,6 @@ public class Database {
 
     public ArrayList<Book> getBooksByIsbn (int isbn) {           //returns up to 20 results as a String array containing the results matching the search words
         ArrayList<Book> books = new ArrayList<Book>();
-        int i = 0;
         try (Connection connection = DriverManager.getConnection(url)) {
             String query = "SELECT * FROM Imort_Library WHERE isbn LIKE '" + isbn + "%';";
             Statement stmt = connection.createStatement();
@@ -163,9 +161,6 @@ public class Database {
             int rating_4 = HelloApplication.current_book.getRating_4();
             int rating_5 = HelloApplication.current_book.getRating_5();
 
-            float average_rating = HelloApplication.current_book.getAverage_rating();
-
-
             switch (rating) {
                 case 0:
                     rating_0++;
@@ -245,7 +240,6 @@ public class Database {
 
         HelloApplication.current_book.setNumber_ratings(number_ratings);
 
-        int rating_0 = HelloApplication.current_book.getRating_0();
         int rating_1 = HelloApplication.current_book.getRating_1();
         int rating_2 = HelloApplication.current_book.getRating_2();
         int rating_3 = HelloApplication.current_book.getRating_3();
