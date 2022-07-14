@@ -1,1 +1,1 @@
-# DB2 Projekt Library
+# DB2 Project Library
